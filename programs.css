@@ -83,7 +83,6 @@ main{
     text-align: center;
 }
 .undergraduate,.diploma,.postgraduate{
-    border:2px solid #fff;
     margin:1rem;
     border-radius: 10px;
 }
