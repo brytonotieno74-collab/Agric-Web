@@ -296,14 +296,10 @@ footer{
         flex-direction:column;
     }
     .navigation{
-        display:flex;
-        flex-wrap:wrap;
         justify-content: center;
         align-items: center;
-        padding:2rem;
-    }
-    .navigation a{
-        font-size: 1.5rem;
+        padding:2.5rem;
+        font-size:1.2rem;
     }
     .logo{
         display:none;
