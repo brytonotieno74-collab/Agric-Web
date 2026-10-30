@@ -444,7 +444,7 @@ aside{
 @media(width<=35.995rem){
     /*Smartphones*/
   html{
-    font-size:55%;
+    font-size:45%;
   }
   .logo{
        display:none;
