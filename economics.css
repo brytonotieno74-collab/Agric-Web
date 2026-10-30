@@ -1,0 +1,351 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+
+}
+html{
+    font-size:100%;
+}
+body{
+    min-height: 100vh;
+    display:grid;
+    color:#fff;
+     background:linear-gradient(to right,rgba(0,0,0,0.8),
+    rgba(0,0,0,0.8),
+    rgba(0,0,0,0.8),
+    rgba(0,0,0,0)),
+    url("images/my.avif");
+    opacity:85%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-attachment: scroll;
+    background-size:cover;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "nav nav nav"
+    "header header header"
+    "main main main"
+    "aside aside aside"
+    "footer footer footer"
+    ;
+}
+  nav{
+    grid-area:nav;
+  }
+  header{
+    grid-area:header;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main{
+    grid-area: main;
+  }
+  aside{ 
+    grid-area:aside;
+  }
+  footer{
+    grid-area: footer;
+  }
+   /* header, main{
+    border:2px solid rgb(155, 134, 134);
+    margin:1rem;
+  } */
+.navigation{
+    background-color: green;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    align-items: center;
+    top:0;
+    position:sticky;
+}
+.logo{
+    text-transform: uppercase;
+    font-size:1.1rem;
+    font-weight: 1000;
+    margin-left:1.2rem;
+}
+.navigation ul{
+    display:flex;
+    flex-wrap:wrap;
+    gap:1.25rem;
+}
+.navigation li{
+    list-style-type: none;
+}
+.navigation a{
+    text-decoration: none;
+    color:rgb(250, 253, 251);
+    font-size:1.1rem;
+    padding:0.6rem;
+    font-weight:1000;
+    /* margin-right:1rem; */
+    transition: 1s ease-in;
+
+}
+ li a:hover{
+    color:rgb(247, 237, 237);
+    background-color: #000;
+    border-radius: 6px;
+}
+header{
+    grid-area:header;
+    
+}
+header h1 {
+    text-align: center;
+    margin:auto;
+    border:none;
+    font-size:1.5rem;
+}
+.overview{
+    text-align: center;
+    margin:2rem;
+    font-size:1.3rem;
+    line-height:1.6;
+    font-weight:700;
+}
+.overview ::first-letter{
+    font-size:2.5rem;
+    font-weight:1000;
+}
+.container{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap:30px;
+    margin:1rem 4rem;
+
+}
+.beef{
+    grid-column-start: 1;
+}
+.dairy{
+    grid-column-start: 2;
+}
+.poultry{
+    grid-column-start: 3;
+}
+.para{
+     margin-top:.6rem;
+    text-align: center;
+    font-size:1.3rem;
+    font-weight:bold;
+}
+.logo-image{
+    object-fit: cover;
+    object-position: center;
+    height:auto;
+    width:100%;
+}
+.beef,.dairy,.poultry{ border:2px solid white;
+    border-radius:10px;
+    height:max-content;
+    width: auto;
+    transition: transform .6s ease;
+    margin:0 auto;
+
+}
+.beef:hover,.dairy:hover,.poultry:hover{
+    transform:scale(0.95);
+}
+.Explore{
+     display:flex;
+      justify-content: center;
+      align-items: center;
+       border-radius: 5px;
+       text-decoration: none;
+       color:#fff;
+       font-size:1.1rem;
+       font-weight:700;
+       background-color:hsl(110, 96%, 37%);
+       margin:2rem;
+      padding: 8px 16px;
+}
+.Explore:hover{
+    background-color: rgb(212, 72, 72);
+    color:white;
+    transition:1s ease;
+}
+footer{
+    grid-area:footer;
+    height:100%;
+    background-color: rgb(70, 231, 70);
+    height: auto;
+}
+.footer-elements{
+
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: 500;
+    color:black;
+    margin:20px;
+    font-size:1.1rem;
+}
+.contacts,.social-media,.Links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contacts p, .social-media p, .Links p{
+ margin:5px;
+}
+.social-media a, .Links a{
+    text-decoration: none;
+    padding:.1rem;
+    margin:10px;
+    color:rgb(6, 15, 139);
+    border-radius:2px; 
+     transition: 1s ease;
+}
+.social-media a:hover, .Links a:hover{
+    background-color: black;
+    color:#fff;
+}
+ @media(width>62rem){
+    html{
+        font-size:75%;
+    }
+    .navigation{
+      padding:3.2rem;
+    }
+    .navigation a, .logo{
+        font-size:1.5rem;
+    }
+    header h1{
+        padding:2.5rem;
+        font-size:1.8rem;
+    }
+    .overview{
+       font-size:1.8rem;
+       font-weight:500;
+    }
+    .logo-image{
+        margin-top:1.3rem;
+
+    }
+    .footer-elements{
+        font-size:1.4rem;
+    }
+}
+@media(62rem>=width>48rem){
+ html{
+    font-size:65%;
+ }
+ .logo{
+    display:none;
+ }
+ .navigation{
+    padding:3rem;
+ }
+ .navigation a, .logo{
+    font-size:1.6rem;
+ }
+ header h1{
+    padding:3rem;
+    font-size:2rem;
+ }
+ .overview{
+    font-size:1.8rem;
+    font-weight:500;
+ }
+ .footer-elements{
+    font-size:1.6rem;
+    font-weight:bold;
+ }
+}
+
+@media(36rem<=width<48rem){
+  html{
+    font-size:60%;
+  }
+
+  .navigation{
+    padding:2.5rem;
+    justify-content: center;
+  }
+  .navigation a{
+    font-size:1.5rem;
+  }
+  .logo{
+      display:none;
+}
+  header h1{
+    padding:1.8rem;
+    text-shadow:4px 4px 8px #fff;
+    font-size:2rem;
+  }
+  .container{
+    gap:15px;
+  }
+  .overview{
+    font-size:1.9rem;
+    font-weight:500;
+  }
+  .logo-image{
+    margin-top: 1.1rem;
+  }
+  .para{
+   font-size:1.6rem;
+  }
+  .Explore{
+   font-size:1.1rem;
+   padding:1.2rem;
+  }
+  .footer-elements{
+    font-size:1.5rem;
+  }
+}
+@media(width<=35.995rem){
+    /*Smartphones*/
+     html{
+        font-size:55%;
+    } 
+    body{
+        display:flex;
+        flex-direction:column;
+    }
+    .navigation{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: center;
+        align-items: center;
+        padding:2rem;
+    }
+    .navigation a{
+        font-size: 1.5rem;
+    }
+    .logo{
+        display:none;
+    }
+    header h1{
+        padding:2rem;
+        text-shadow: 3px 4px 8px #fff;
+        font-size:1.8rem;
+    }
+    .overview{
+        font-size:1.8rem;
+        font-weight:500;
+    }
+    .container{
+        display:flex;
+        flex-direction: column;
+    }
+    .logo-image{
+        margin-top:1.1rem;
+    }
+    .para{
+       font-size:1.8rem;
+    }
+    .Explore{
+        font-size:1.4rem;
+    }
+    .footer-elements{
+        font-size:1.4em;
+    }
+}
