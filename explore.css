@@ -25,7 +25,7 @@ body{
     margin:auto;
     display:grid;
     row-gap: 2px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows:auto;
     grid-template-areas:
      "nav nav nav"
@@ -192,9 +192,8 @@ aside{
   list-style-type:none;
 }
 .quick-links li{
-    display:flex;
-    flex-wrap:wrap;
-    padding:1rem;
+    /* display:block; */
+    margin:2rem;
     transition: transform .6s ease;
     
 }
@@ -204,8 +203,8 @@ aside{
   color:white;
   font-weight:bold;
   background:transparent;
-  padding:0.5rem;
-  text-shadow:2px 5px 4px black;
+  padding:1rem;
+  text-shadow:2px 4px 8px black;
   transition: 1s ease;
   border:2px solid rgb(235, 243, 235);
   border-radius:10px;
@@ -219,7 +218,12 @@ aside{
     background-color: rgb(17, 226, 9);
     transform:scale(0.95);
     border: rgb(17, 226, 9);
-}
+ }
+ .fa-graduation-cap,.fa-lightbulb,.fa-folder-plus, .fa-cloud, .fa-calendar-days{
+    color: rgb(233, 241, 241); 
+    margin-left:4rem;
+    font-size:1.8rem; 
+ }
 .login{
     display: flex;
     gap:10px;
@@ -231,7 +235,6 @@ footer{
     height: auto;
 }
 .footer-elements{
-
     display:flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -263,11 +266,19 @@ footer{
     color:#fff;
 }
 @media(width>62rem){
-
+   html{
+    font-size:78%;
+   }
+   .quick-links li{
+     display:flex;
+     flex-direction: column;
+     flex-shrink: 1;
+     gap:20px;
+   }
 }
 @media(48rem <= width <62rem){
     html{
-        font-size:70%;
+        font-size:65%;
     }
     body{
         display:grid;
@@ -296,11 +307,19 @@ footer{
     footer{
         grid-area: footer;
     }
+    .quick-links li{
+    margin:1rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: transform .6s ease;
+   }
 }
  @media(36rem<= width <48rem){
     /*Large Phones in Portrait Mode*/
     html{
-        font-size:60%;
+        font-size:55%;
     }
     body{
     display:flex;
@@ -315,6 +334,14 @@ footer{
    }
    .navigation li{
      padding:2rem;
+   }
+   .quick-links li{
+    margin:1rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: transform .6s ease;
    }
    .navigation a, .navigation h2{
     font-size:1.5rem;
@@ -365,9 +392,6 @@ footer{
    footer{
     position:sticky;
     bottom:0;
-   }
-   i:hover{
-    color: black;
    }
    .quick-links a{
      padding:1.5rem;
