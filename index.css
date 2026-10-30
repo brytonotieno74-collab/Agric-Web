@@ -156,7 +156,7 @@ footer{
     background: rgb(199, 191, 191);
     border:none;
     /* border:2px solid white; */
-    border-radius:10px;
+   border-radius:10px;
    transition: transform .6s ease;
 }
 .login-details:hover{
@@ -450,7 +450,7 @@ aside{
        display:none;
   }
   .navigation{
-    justify-content: center;
+    justify-content: space-evenly;
     font-size:1.2rem;
     padding:2.5rem;
   }
@@ -493,6 +493,7 @@ aside{
   }
   .login-details{
     padding: 2rem 4rem;
+    width:25rem;
   }
   ::placeholder{
     font-size:1.6rem;

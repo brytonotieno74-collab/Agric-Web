@@ -219,7 +219,6 @@ aside{
     background-color: rgb(17, 226, 9);
     transform:scale(0.95);
     border: rgb(17, 226, 9);
-
 }
 .login{
     display: flex;
@@ -366,6 +365,9 @@ footer{
    footer{
     position:sticky;
     bottom:0;
+   }
+   i:hover{
+    color: black;
    }
    .quick-links a{
      padding:1.5rem;
