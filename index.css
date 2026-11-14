@@ -508,9 +508,9 @@ aside{
   aside{
   animation-name: spin;
     animation-duration: 3s;
-    animation-delay: 10s;
+    animation-delay: 2s;
     animation-iteration-count: infinite;
-    animation-timing-function: 2s;
+    animation-timing-function: 20s;
     animation-play-state:running;
   }
     aside:hover{
@@ -520,6 +520,7 @@ aside{
      0%{
      }
      50%{
+       border:2px solid lightgreen;
        transform:rotateY(360deg);
        box-shadow: 4px 4px 15px #000;
        background:radial-gradient(rgb(53, 51, 51), rgb(10, 235, 10));
