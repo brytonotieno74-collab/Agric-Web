@@ -516,7 +516,7 @@ aside{
      0%{
      }
      20%{
-       transform:translateY(360deg);
+       transform:rotateY(360deg);
        scale:0.5;
        border-radius:30%;
        box-shadow: 4px 4px 15px #000;
