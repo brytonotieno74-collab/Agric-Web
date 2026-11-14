@@ -508,14 +508,14 @@ aside{
   aside{
   animation-name: spin;
     animation-duration: 3s;
-    animation-delay: 2s;
-    animation-iteration-count: 2;
+    animation-delay: 10s;
+    animation-iteration-count: infinite;
     animation-timing-function: 2s;
   }
   @keyframes spin{
      0%{
      }
-     100%{
+     50%{
        transform:rotateY(360deg);
        box-shadow: 4px 4px 15px #000;
        background:radial-gradient(rgb(53, 51, 51), rgb(10, 235, 10));
