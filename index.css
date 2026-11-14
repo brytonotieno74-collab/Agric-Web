@@ -511,7 +511,11 @@ aside{
     animation-delay: 10s;
     animation-iteration-count: infinite;
     animation-timing-function: 2s;
+    animation-play-state:running;
   }
+    aside:hover{
+        animation-play-state:paused;
+    }
   @keyframes spin{
      0%{
      }
